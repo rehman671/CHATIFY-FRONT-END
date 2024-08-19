@@ -1,0 +1,50 @@
+<section class="top">
+    <div class="navigation">
+        <button class="checking-btn">
+            <span class="material-symbols-outlined">
+                home
+                </span>
+            </button>
+            <button class="checking-btn">
+                <span class="material-symbols-outlined">
+                    account_circle
+                    </span>
+            </button>
+    </div>
+    <div class="search-box">
+        <input type="text" placeholder="Search">
+    </div>
+    <div class="checking">
+            <button mat-raised-button matBadge="2" matBadgeSize="small"  [matBadgeHidden]="hidden"  class="checking-btn hover-color-1">
+                <span class="material-symbols-outlined">
+                    mail
+                    </span>
+            </button>
+            <button mat-raised-button matBadge="7" matBadgeSize="small"  [matBadgeHidden]="hidden" class="checking-btn hover-color-2">
+                <span   class="material-symbols-outlined">
+                    notifications
+                    </span>
+            </button>
+            <button class="checking-btn">
+                <span   class="material-symbols-outlined">
+                    settings
+                    </span>
+            </button>
+    </div>
+</section>
+<section class="main">
+    <div class="trends-card">
+        <app-cards></app-cards>
+    </div>
+    
+    <section class="posts">
+        <app-posts [username]="'Saim Ahmed'" [postedTime]="'Today'" [caption]="'What a beautiful day...!'" [type]="'img'" [image_url]="'https://images.unsplash.com/photo-1546471180-335a013cb87b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'" [liked]="true" [likeCount]="24"></app-posts>
+        <app-posts [username]="'Abdul Rehman'" [postedTime]="'1min'" [caption]="'Wonderful Day'"></app-posts>
+        <app-posts [username]="'Asad Kherro'" [postedTime]="'1d'" [caption]="'Hello I am new to this App'" [type]="'img'" [image_url]="'https://images.unsplash.com/photo-1569154107747-fb00e3b3430d?q=80&w=1649&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'"></app-posts>
+        <app-posts [username]="'Asad Kherro'" [postedTime]="'1d'" [caption]="'Hello I am new to this App'"></app-posts>
+    </section>
+    <div class="you-may-know-card">
+        <app-cards></app-cards>
+    </div>
+    
+</section>

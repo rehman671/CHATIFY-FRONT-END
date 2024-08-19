@@ -1,0 +1,67 @@
+<div class="main">
+  <div class="head">
+    <div class="user-picture">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSooCX-nPSHN0kCVdUnm-eptCPvUF04YaxeHQ&s"
+        alt=""
+      />
+    </div>
+    <div class="post-info">
+      <div class="user-name">
+        <h4>{{ username }}</h4>
+      </div>
+      <div class="posted-date">
+        <h6>
+          {{ postedTime }}
+        </h6>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="caption">
+      {{ caption }}
+    </div>
+    <div *ngIf="type === 'img'" class="post-image">
+      <img [src]="image_url" alt="" />
+    </div>
+  </div>
+  <div class="post-stats">
+    <div class="like-comment">
+      <div class="likecount">
+        <h5>{{likeCount}} likes</h5>
+      </div>
+      <div class="commentcount">
+        <h5>2 comments</h5>
+      </div>
+    </div>
+    <div class="sharecount">
+      <h5>1 share</h5>
+    </div>
+  </div>
+  <div class="user-actions">
+    <div (click)="toggleLike()"  [ngClass]="{
+      'like':!liked,
+      'liked':liked
+    }">
+      <button class="like-btn">
+        <span class="material-symbols-outlined" >
+          thumb_up
+          </span>
+    </button>
+    </div>
+    <div class="comment">
+      <button class="comment-btn">
+        <span   class="material-symbols-outlined">
+            chat
+            </span>
+    </button>
+    </div>
+    <div class="share">
+      <button class="share-btn">
+        <span class="material-symbols-outlined">
+          rotate_right
+          </span>
+    </button>
+    </div>
+  </div>
+</div>
