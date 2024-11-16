@@ -9,15 +9,16 @@ import { CommonModule } from '@angular/common';
   styleUrl: './posts.component.scss'
 })
 export class PostsComponent {
-  @Input() username: string;
-  @Input() postedTime: string;
-  @Input() caption: string;
-  @Input() type: string;
-  @Input() image_url: string;
+  @Input() username: String;
+  @Input() postedTime: String;
+  @Input() caption?: String;
+  @Input() type: String;
+  @Input() image_url: String;
   @Input() liked: boolean;
   @Input() likeCount: number;
   @Input() commentCount: number;
   @Input() shareCount: number;
+  @Input() postID: String;
   private likeChange: boolean;
 
   constructor() {
@@ -31,6 +32,7 @@ export class PostsComponent {
     this.likeCount = 0;
     this.commentCount = 0;
     this.shareCount = 0;
+    this.postID = "";
   }
 
 

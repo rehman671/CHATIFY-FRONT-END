@@ -1,0 +1,17 @@
+<div class="side-nav" [class.open]="isOpen">
+    <!-- <button class="close-btn" (click)="toggleSideNav()">&#x2715;</button> -->
+    <!-- Add your navigation links here -->
+    <ul *ngIf="navType=='setting'">
+      <li><a href="#">Profile</a></li>
+      <li><a href="#">Settings</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+    <ul *ngIf="navType=='chat'">
+        <div *ngIf="chatBox.length == 0" class="empty">
+            <p class="fade_text small-text center-text">No conversation started yet</p>
+          </div>
+    </ul>
+  </div>
+<div class="overlay" (click)="toggleSideNav()" [class.visible]="isOpen">
+
+</div>

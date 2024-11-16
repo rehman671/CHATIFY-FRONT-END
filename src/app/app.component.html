@@ -1,2 +1,3 @@
-<!-- <app-feeds></app-feeds> -->
-<app-signup></app-signup>
+<header *ngIf="isLoginPage()"></header>
+<router-outlet></router-outlet>
+<footer *ngIf="!isLoginPage()"></footer>
